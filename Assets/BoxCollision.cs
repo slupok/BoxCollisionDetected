@@ -51,7 +51,7 @@ public class Box
 }
 
 [CreateAssetMenu(menuName = "BoxCollision")]
-public class BoxCollision : ScriptableObject
+public class BoxCollision
 {
     //поворот вектора кватернионом
     private static Vector3 QuanRotation(Vector3 v,Quaternion q)
@@ -213,8 +213,6 @@ public class BoxCollision : ScriptableObject
     //главный метод
     public static Vector3 Collision(Box box1, Box box2)
     {
-        Debug.Log(box1.Center);
-        Debug.Log(box2.Center);
         //получаем позицию центра кубов
         var point = GetPoint(box1);
         var point2 = GetPoint(box2);
